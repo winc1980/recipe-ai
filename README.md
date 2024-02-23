@@ -18,19 +18,10 @@
 
 ## セットアップ
 
-Firebase Toolsのインストール
+1. `.env.sample`をコピーして、`.env.local`として保存する。
+2. `VITE_OPENAI_KEY=`にOpenAIのキーを入力する。
 
-```bash
-npm install -g firebase-tools
-```
-
-Firebaseへログインする
-
-```bash
-firebase login
-```
-
-パッケージのインストール
+3. パッケージのインストール
 
 ```bash
 npm install
