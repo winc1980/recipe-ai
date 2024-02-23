@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" src="./docs/images/recipe-ai-logo.png" /><br />
+    <img width="500" src="./docs/images/recipe-ai-logo.png" /><br />
     <strong align="center">今晩の料理は何にしますか？ RECIPE AI ならあなたの冷蔵庫の写真から最適なレシピを提案いたします。</strong><br /><br />
     <p align="center">HPチーム春合宿2024年 グループ3 作品</p>
 </p>
