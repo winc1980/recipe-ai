@@ -18,6 +18,20 @@
 
 ## セットアップ
 
+Firebase Toolsのインストール
+
+```bash
+npm install -g firebase-tools
+```
+
+Firebaseへログインする
+
+```bash
+firebase login
+```
+
+パッケージのインストール
+
 ```bash
 npm install
 ```
