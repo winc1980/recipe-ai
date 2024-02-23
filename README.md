@@ -15,3 +15,15 @@
 
 - Volar
 - Prettier - Code formatter
+
+## セットアップ
+
+```bash
+npm install
+```
+
+## 実行
+
+```bash
+npm run dev
+```
