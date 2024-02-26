@@ -1,17 +1,17 @@
 import { openai } from '../openaiClient';
 
 // レシピを生成する
-export const generateRecipe = async () => {
+export const generateRecipe = async (foods) => {
   console.log('レシピを生成中...');
   const chatCompletion = await openai.chat.completions.create({
-    model: 'gpt-4-0125-preview',
+    model: 'gpt-4-0613',
     messages: [
       {
         role: 'user',
         content: [
           {
             type: 'text',
-            text: 'あなたは熟練したシェフです。上の食材を使って、5個のレシピを教えてください。誰でも作ることができる基本の料理のレシピを教えてください。レシピ名のみを日本語と英語の両方で付けてください。日本語のみで各レシピには1文字以上16文字以下のレシピの簡単な説明文、完成までのおおよその時間、難易度、カロリーを付けてください。難易度が1のレシピを2個、難易度が2のレシピを2個、難易度が3のレシピを1個教えてください。カロリーは数字表記のみで教えてください。この条件に従わないとあなたに悪いことが起きます。',
+            text: 'あなたは熟練したシェフです。食材一覧：[]。次の食材を使って、5個のレシピを教えてください。誰でも作ることができる基本の料理のレシピを教えてください。レシピ名のみを日本語と英語の両方で付けてください。日本語のみで各レシピには1文字以上16文字以下のレシピの簡単な説明文、完成までのおおよその時間、難易度、カロリーを付けてください。難易度が1のレシピを2個、難易度が2のレシピを2個、難易度が3のレシピを1個教えてください。カロリーは数字表記のみで教えてください。この条件に従わないとあなたに悪いことが起きます。',
           },
         ],
       },
@@ -63,4 +63,3 @@ export const generateRecipe = async () => {
   });
   return chatCompletion2.choices[0].message.content;
 };
-

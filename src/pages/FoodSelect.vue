@@ -70,7 +70,10 @@ const select = (item, i) => {
   </main>
   <footer>
     <div class="jump-button">
-      <button class="word-jump-button">
+      <button
+        class="word-jump-button"
+        @click="router.push({ name: 'RecipeList' })"
+      >
         <span>決定する</span>
       </button>
     </div>
