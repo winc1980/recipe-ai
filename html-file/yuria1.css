@@ -1,0 +1,182 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+}
+
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;    
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+}
+
+
+p {
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #FFFFFF;  
+    border-bottom: 1px solid #ECECEC; 
+    height: 65px;     
+    margin: auto;
+    padding-bottom: 7rem;
+}
+
+
+
+header img{
+    margin-top: 20px;
+}
+
+header span{
+    color: #442A00;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 121px;
+}
+
+.select-title{
+    max-width: 353px;
+    margin: 0 auto;
+}
+
+
+.container{
+    max-width: 353px;
+    margin-top: 0px;
+    margin: 0px auto 0;
+}
+
+
+/* こっから下にコーディングしてください */
+/* 上も修正必要であればいじってもらって大丈夫 */
+
+.recipe-photo img{   
+   display: block;
+   width: 100vw;
+    margin-top: 65px; 
+    margin-bottom: 0px;    
+}
+
+.recipe-name{
+    font-size: 20px;
+    color: #EF797B;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.recipe-copy{
+    font-size: 14px;
+    color: #442A00;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.recipe-info{
+    margin-top: 28px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.recipe-ave{
+    margin-top: 22px;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 24px;
+    list-style: none;
+}
+
+.recipe-ave li{
+    font-size: 14px;
+    color: #442A00;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.recipe-ave img{
+    margin-right: 11px;
+}
+
+.material h2{
+    font-size: 16px;
+    color: #EF797B;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.ingredient{
+    margin-top: 12px;
+    font-size: 14px;
+    color: #442A00;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.material{
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 24px;
+}
+
+.recipe-guide h2{
+    font-size: 16px;
+    color: #EF797B;
+    font-weight: 700;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.recipe-guide ol {
+    counter-reset: my-counter;
+    list-style: none;
+    padding: 0;
+  }
+   
+.recipe-guide li {
+    margin-bottom: 18px;
+    padding-left: 27px;
+    position: relative;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
+    font-size: 14px;
+    font-weight: 400;
+    color: #442A00;
+  }
+
+.recipe-guide li:last-child{
+    border-style: none;
+  }
+
+.recipe-guide li:before {
+    content: counter(my-counter);
+    counter-increment: my-counter;
+    background-color: #EF797B;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    line-height: 26px;
+    margin-left: -30px;
+    text-align: center;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+.recipe-guide{
+    margin-bottom: 100px;
+  }
