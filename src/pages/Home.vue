@@ -44,7 +44,25 @@
           <img src="/recipe4.png" alt="" />
           <div>
             <h3>
-              卵とトマトの中華風炒め卵とトマトの中華風炒め卵とトマトの中華風炒め
+              卵とトマトの中華風炒め
+            </h3>
+            <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
+          </div>
+        </div>
+        <div class="recipe">
+          <img src="/recipe4.png" alt="" />
+          <div>
+            <h3>
+              卵とトマトの中華風炒め
+            </h3>
+            <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
+          </div>
+        </div>
+        <div class="recipe">
+          <img src="/recipe4.png" alt="" />
+          <div>
+            <h3>
+              卵とトマトの中華風炒め
             </h3>
             <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
           </div>
@@ -77,7 +95,7 @@ p {
 .container {
   max-width: 390px;
   margin: 0 auto;
-  padding-bottom: 7rem;
+  padding-bottom: 182px;
 }
 
 header {
