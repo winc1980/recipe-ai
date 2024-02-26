@@ -17,11 +17,12 @@ const imageUpload = (e) => {
   reader.onload = async (event) => {
     const b64Image = event.currentTarget.result;
     // 食材を検出する
-    //const foods = await detectFoods(b64Image);
-    //console.log(foods); // {foods_jp: array, foods_en: array}
+    const foods = await detectFoods(b64Image);
+    console.log(foods); // {foods_jp: array, foods_en: array}
+
     // サムネイル画像の取得 wikimedia
     let foodThumbnails = [];
-    for (const query of foods_en) {
+    for (const query of foods.foods_en) {
       foodThumbnails.push(await getImage(query));
     }
     // ストアに保存
@@ -35,6 +36,10 @@ const imageUpload = (e) => {
     router.push({ name: 'FoodSelect' });
   };
   reader.readAsDataURL(files[0]);
+};
+
+const test = () => {
+  console.log(store.state.foods);
 };
 </script>
 
@@ -112,7 +117,7 @@ const imageUpload = (e) => {
       </label>
     </div>
     <div class="jump-button">
-      <button class="word-jump-button" @click="">
+      <button class="word-jump-button" @click="test()">
         <img src="/word-icon.png" alt="" />
         <span>文字で食材を入力</span>
       </button>
