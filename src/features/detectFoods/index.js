@@ -35,28 +35,38 @@ export const detectFoods = async (b64Image) => {
       },
       {
         role: 'user',
-        content: '',
+        content: 'あなたの回答を基にしてfoods関数を実行してください。',
       },
     ],
-    function_call: ['foods'],
     functions: [
       {
         name: 'foods',
         parameters: {
           type: 'object',
           properties: {
-            foods: {
+            foods_jp: {
               type: 'array',
-              description: '食品の一覧を与える。',
+              description:
+                'このプロパティには日本語で食品のリストを渡します。英語は渡せません。',
+              items: {
+                type: 'string',
+              },
+            },
+            foods_en: {
+              type: 'array',
+              description:
+                'このプロパティには英語で食品のリストを渡します。日本語は渡せません。',
               items: {
                 type: 'string',
               },
             },
           },
-          required: ['foods'],
+          required: ['foods_jp', 'foods_en'],
         },
       },
     ],
+    function_call: 'auto',
     max_tokens: 1000,
   });
+  return JSON.parse(chatCompletion2.choices[0].message.function_call.arguments);
 };
