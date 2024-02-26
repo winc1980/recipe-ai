@@ -7,9 +7,7 @@ const router = useRouter();
 // ストア
 const store = useStore();
 
-const select = (e) => {
-  console.log(e.target.name);
-};
+const select = (item, i) => {};
 </script>
 
 <template>
@@ -29,32 +27,13 @@ const select = (e) => {
 
       <div>
         <div class="select-image">
-          <li class="active">
-            <img src="/recipe1.png" alt="" name="きゅうり" @click="select" />
-            <p>きゅうり</p>
-          </li>
-          <li>
-            <img src="/Milk_glass.png" alt="" />
-            <p>納豆</p>
-          </li>
-          <li>
-            <img src="/potato.png" alt="" />
-            <p>じゃがいも</p>
-          </li>
-        </div>
-
-        <div class="select-image">
-          <li>
-            <img src="/milk.png" alt="" />
-            <p>牛乳</p>
-          </li>
-          <li>
-            <img src="/salt.png" alt="" />
-            <p>塩</p>
-          </li>
-          <li>
-            <img src="/400px-Table_salt_with_salt_shaker_V1.png" alt="" />
-            <p>チーズ</p>
+          <li v-for="(item, i) in store.state.foods.jp" class="active">
+            <img
+              :src="store.state.foods.thumbnail[i]"
+              alt=""
+              @click="select(item, i)"
+            />
+            <p>{{ item }}</p>
           </li>
         </div>
       </div>
