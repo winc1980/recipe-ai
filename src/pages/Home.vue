@@ -1,4 +1,25 @@
-<script></script>
+<script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const imageUpload = (e) => {
+  console.log('imageUpload...');
+  const files = e.target.files || e.dataTransfer.files;
+  const reader = new FileReader();
+  reader.onload = async (event) => {
+    const b64Image = event.currentTarget.result;
+    // 食材を検出する
+    const res = await detectFoods(b64Image);
+    console.log(res); // {foods_jp: array, foods_en: array}
+  };
+  reader.readAsDataURL(files[0]);
+};
+
+const dummy = () => {
+  router.push({ name: 'FoodSelect' });
+};
+</script>
+
 <template>
   <header>
     <div class="title">
@@ -43,27 +64,21 @@
         <div class="recipe">
           <img src="/recipe4.png" alt="" />
           <div>
-            <h3>
-              卵とトマトの中華風炒め
-            </h3>
+            <h3>卵とトマトの中華風炒め</h3>
             <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
           </div>
         </div>
         <div class="recipe">
           <img src="/recipe4.png" alt="" />
           <div>
-            <h3>
-              卵とトマトの中華風炒め
-            </h3>
+            <h3>卵とトマトの中華風炒め</h3>
             <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
           </div>
         </div>
         <div class="recipe">
           <img src="/recipe4.png" alt="" />
           <div>
-            <h3>
-              卵とトマトの中華風炒め
-            </h3>
+            <h3>卵とトマトの中華風炒め</h3>
             <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
           </div>
         </div>
@@ -73,7 +88,7 @@
   <footer>
     <div class="jump-button">
       <label class="image-jump-button">
-        <input type="file" name="file" @change="imageUpload" />
+        <input type="file" name="file" @change="dummy()" />
         <img src="/image-icon.png" alt="" />
         画像で食材を入力
       </label>
