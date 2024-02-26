@@ -12,7 +12,7 @@ const store = createStore({
       foods: {
         jp: ['ex_りんご', 'ex_きゅうり'],
         en: ['apple', 'cucumber'],
-        images: [],
+        thumbnail: [],
       },
       // 選択した食材（食材の名前）
       selectedFoods: [],
@@ -23,6 +23,7 @@ const store = createStore({
       console.log('ストアに食材を保存...');
       state.foods.jp = data.jp;
       state.foods.en = data.en;
+      state.foods.thumbnail = data.thumbnail;
     },
     selectFood(state, name) {
       console.log('selectFood...');
