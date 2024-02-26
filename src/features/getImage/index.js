@@ -24,7 +24,7 @@ export const getImage = async (query) => {
   let thumbnailUrl = '';
   for (const page of pages) {
     if (page.index === 1) {
-      thumbnailUrl = page?.thumbnail.source;
+      thumbnailUrl = page?.thumbnail?.source || '';
     }
   }
 

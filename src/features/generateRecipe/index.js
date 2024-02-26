@@ -11,7 +11,7 @@ export const generateRecipe = async (foods) => {
         content: [
           {
             type: 'text',
-            text: 'あなたは熟練したシェフです。食材一覧：[]。次の食材を使って、5個のレシピを教えてください。誰でも作ることができる基本の料理のレシピを教えてください。レシピ名のみを日本語と英語の両方で付けてください。日本語のみで各レシピには1文字以上16文字以下のレシピの簡単な説明文、完成までのおおよその時間、難易度、カロリーを付けてください。難易度が1のレシピを2個、難易度が2のレシピを2個、難易度が3のレシピを1個教えてください。カロリーは数字表記のみで教えてください。この条件に従わないとあなたに悪いことが起きます。',
+            text: `あなたは熟練したシェフです。食材一覧：[${foods.join(',')}]。次の食材を使って、5個のレシピを教えてください。誰でも作ることができる基本の料理のレシピを教えてください。レシピ名のみを日本語と英語の両方で付けてください。日本語のみで各レシピには1文字以上16文字以下のレシピの簡単な説明文、完成までのおおよその時間、難易度、カロリーを付けてください。難易度が1のレシピを2個、難易度が2のレシピを2個、難易度が3のレシピを1個教えてください。カロリーは数字表記のみで教えてください。この条件に従わないとあなたに悪いことが起きます。`,
           },
         ],
       },
@@ -37,7 +37,7 @@ export const generateRecipe = async (foods) => {
         parameters: {
           type: 'object',
           properties: {
-            recipe_jp: {
+            title_jp: {
               type: 'array',
               description:
                 'このプロパティには日本語でレシピのリストを渡します。英語は渡せません。',
@@ -45,7 +45,7 @@ export const generateRecipe = async (foods) => {
                 type: 'string',
               },
             },
-            recipe_en: {
+            title_en: {
               type: 'array',
               description:
                 'このプロパティには英語でレシピのリストを渡します。日本語は渡せません。',
@@ -53,13 +53,50 @@ export const generateRecipe = async (foods) => {
                 type: 'string',
               },
             },
+            time: {
+              type: 'array',
+              description: 'このプロパティには調理時間をリストで渡します。',
+              items: {
+                type: 'number',
+              },
+            },
+            kcal: {
+              type: 'array',
+              description:
+                'このプロパティにはレシピのカロリーをリストで渡します。',
+              items: {
+                type: 'number',
+              },
+            },
+            difficulty: {
+              type: 'array',
+              description:
+                'このプロパティにはレシピの難易度をリストで渡します。',
+              items: {
+                type: 'number',
+              },
+            },
+            catchcopy: {
+              type: 'array',
+              description: 'キャッチコピーをリストで渡します。',
+              items: {
+                type: 'string',
+              },
+            },
           },
-          required: ['recipe_jp', 'recipe_en'],
+          required: [
+            'title_jp',
+            'title_en',
+            'time',
+            'kcal',
+            'difficulty',
+            'catchcopy',
+          ],
         },
       },
     ],
     function_call: 'auto',
     max_tokens: 1000,
   });
-  return chatCompletion2.choices[0].message.content;
+  return JSON.parse(chatCompletion2.choices[0].message.function_call.arguments);
 };

@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import { detectFoods } from '../features/detectFoods';
@@ -8,10 +9,13 @@ import { getImage } from '../features/getImage';
 const router = useRouter();
 // ストア
 const store = useStore();
+// 進捗バー
+const progressVisible = ref(false);
 
 // 冷蔵庫内の画像アップロード
 const imageUpload = (e) => {
   console.log('imageUpload...');
+  progressVisible.value = true;
   const files = e.target.files || e.dataTransfer.files;
   const reader = new FileReader();
   reader.onload = async (event) => {
@@ -37,13 +41,12 @@ const imageUpload = (e) => {
   };
   reader.readAsDataURL(files[0]);
 };
-
-const test = () => {
-  console.log(store.state.foods);
-};
 </script>
 
 <template>
+  <div :class="progressVisible ? 'loading' : ''">
+    <progress class="progress is-small is-primary" max="100">15%</progress>
+  </div>
   <header>
     <div class="title">
       <img src="/recipe-ai.png" alt="" />
@@ -201,7 +204,8 @@ p {
   object-fit: cover;
   flex-shrink: 0;
 }
-.reco-icon , .season-icon{
+.reco-icon,
+.season-icon {
   display: block;
   width: 26px;
   height: 26px;
@@ -270,5 +274,15 @@ footer {
   right: 0;
   width: 100vw;
   background-color: #ffffff;
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loading progress {
+  position: absolute;
+  top: 74px;
 }
 </style>
