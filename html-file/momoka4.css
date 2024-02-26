@@ -33,6 +33,7 @@ header{
     height: 65px;     
     margin: auto;
     padding-bottom: 7rem;
+
 }
 
 
@@ -41,23 +42,149 @@ header img{
     margin-top: 20px;
 }
 
-header p{
+header span{
     color: #442A00;
     font-size: 16px;
     font-weight: 700;
 }
 
-.select-title{
+main{
     max-width: 353px;
-    display: flex;
-    justify-content: space-between;
+    margin: 65px auto 0;
 }
+
+
+
+
+.select-title{
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.select-title span{
+    margin-left: 57px;
+
+}
+
 
 .result ul li{
-    margin-top: 65px;
+    margin-top: 24px;
     color: #EF797B;
     background-color: #FFF4F5;
-    width: 66px;
     height: 32px;
+    padding: 6px 12px;
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+.list-window{
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500;
+    
+}
+
+.list-window span{
+    margin-left: 12px;
+}
+
+option{
+    color: #442A00;
+    font-size: 15px;
+}
+
+.selectbox{
 
 }
+
+.recipe{
+    display: flex;
+    border-bottom: 1px solid #DED6CA;
+    padding-top: 32px;
+
+}
+
+.recipe img{
+    width: 127px;
+    height: 115px;
+}
+
+.clock,.kcal,.star{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 8px;
+}
+
+.clock img,.kcal img,.star img{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.star{
+    margin-bottom: 26px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+h2{
+    color: #EF797B;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.recipe-text{
+    max-width: 205px;
+    text-align: left;
+    margin: 0 auto;
+}
+.recipe-title p{
+    color: #442A00;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.clock span,.kcal span,.star span{
+    font-size: 12px;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    background: #ffffff;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition-duration: 0.3s;
+  }
+  .btn:hover {
+    background-color: #FFF4F5;
+    color: #442A00;
+  }
+
+
+  .remodal {
+    display: none;
+    border-radius: 8px;
+    width: 328px;
+}
+
+  .remodal ul li{
+    list-style: none;
+    color: #442A00;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 18px 20px;
+    border-bottom: 1px solid #DED6CA;
+    justify-content: left;
+
+  }
+  

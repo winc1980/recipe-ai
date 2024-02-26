@@ -79,6 +79,8 @@ h1{
 .list ul li{
     list-style: none;
     border-bottom: 1px solid #DED6CA;
+    display: flex;
+    justify-content: flex-start;
 
 }
 

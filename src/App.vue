@@ -26,6 +26,9 @@ const imageUpload = (e) => {
   };
   reader.readAsDataURL(files[0]);
 };
+const generatelist = (e) => {
+  console.log('レシピ生成')
+};
 </script>
 
 <template>

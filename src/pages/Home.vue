@@ -1,4 +1,6 @@
-<script></script>
+<script>
+import { generateRecipe } from '../features/generateRecipe';
+</script>
 <template>
   <header>
     <div class="title">
@@ -79,7 +81,7 @@
       </label>
     </div>
     <div class="jump-button">
-      <button class="word-jump-button">
+      <button class="word-jump-button" @click="generatelist">
         <img src="/word-icon.png" alt="" />
         <span>文字で食材を入力</span>
       </button>
