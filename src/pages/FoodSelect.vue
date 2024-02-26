@@ -162,6 +162,7 @@ h1 {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-align: center;
 }
 
 .select-image li {
