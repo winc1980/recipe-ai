@@ -26,7 +26,7 @@ const select = (item, i) => {};
       </div>
 
       <div>
-        <div class="select-image">
+        <ul class="select-image">
           <li v-for="(item, i) in store.state.foods.jp" class="active">
             <img
               :src="store.state.foods.thumbnail[i]"
@@ -35,7 +35,7 @@ const select = (item, i) => {};
             />
             <p>{{ item }}</p>
           </li>
-        </div>
+        </ul>
       </div>
     </div>
 
@@ -119,7 +119,8 @@ h1 {
 
 .select-image {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .select-image {
