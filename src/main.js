@@ -10,8 +10,14 @@ const store = createStore({
     return {
       // 食材リスト（JPとEN）
       foods: {
-        jp: ['ex_りんご', 'ex_きゅうり'],
-        en: ['apple', 'cucumber'],
+        // jp: ['ex_りんご', 'ex_きゅうり'],
+        // en: ['apple', 'cucumber'],
+        // thumbnail: [
+        //   'https://www.nikon-image.com/products/mirrorless/lineup/z_50/img/sample/pic_01_l.jpg',
+        //   'https://www.nikon-image.com/products/mirrorless/lineup/z_50/img/sample/pic_01_l.jpg',
+        // ],
+        jp: [],
+        en: [],
         thumbnail: [],
       },
       // 選択した食材（食材の名前）
@@ -31,7 +37,7 @@ const store = createStore({
     },
     unSelectFood(state, name) {
       console.log('unSelectFood...');
-      state.selectedFoods.filter((n) => n !== name);
+      state.selectedFoods = state.selectedFoods.filter((n) => n !== name);
     },
   },
 });

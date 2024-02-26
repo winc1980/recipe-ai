@@ -7,7 +7,15 @@ const router = useRouter();
 // ストア
 const store = useStore();
 
-const select = (item, i) => {};
+const select = (item, i) => {
+  console.log('toggle select:', item, i);
+  if (store.state.selectedFoods.includes(item)) {
+    store.commit('unSelectFood', item);
+  } else {
+    store.commit('selectFood', item);
+  }
+  console.log('update:', store.state.selectedFoods);
+};
 </script>
 
 <template>
@@ -27,7 +35,10 @@ const select = (item, i) => {};
 
       <div>
         <ul class="select-image">
-          <li v-for="(item, i) in store.state.foods.jp" class="active">
+          <li
+            v-for="(item, i) in store.state.foods.jp"
+            :class="store.state.selectedFoods.includes(item) ? 'active' : ''"
+          >
             <img
               :src="store.state.foods.thumbnail[i]"
               alt=""
