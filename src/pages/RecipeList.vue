@@ -122,7 +122,7 @@ header {
 }
 
 header img {
-  margin-top: 20px;
+  width: 12px;
 }
 
 header span {
@@ -137,8 +137,12 @@ main {
 }
 
 .select-title {
-  max-width: 390px;
+  max-width: 353px;
   margin: 0 auto;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .select-title span {
@@ -146,11 +150,12 @@ main {
 }
 
 .result ul li {
+  font-size: 14px;
   margin-top: 24px;
   color: #ef797b;
   background-color: #fff4f5;
   height: 32px;
-  padding: 6px 12px;
+  padding: 4px 12px 5px;
   list-style: none;
   display: inline-block;
   margin-right: 15px;
