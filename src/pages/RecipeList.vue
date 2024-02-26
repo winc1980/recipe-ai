@@ -16,22 +16,6 @@
                 <li>トマト</li>
             </ul>
         </div>
-        <div class="list-window">
-            <img src="/Arrow_left.png" alt="">
-            <img src="/Arrow_right.png" alt="">
-
-            <a href="#modal_b" class="btn">おすすめ順</a>
-            <div class="remodal" data-remodal-id="modal_b">
-                <ul>
-                    <li>おすすめ順</li>
-                    <li>時間順</li>
-                    <li>カロリー順</li>
-                    <li>難易度順</li>
-                    
-                </ul>
-            </div>
-
-        </div>
 
         
 

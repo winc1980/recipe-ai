@@ -28,7 +28,7 @@ const select = (e) => {
       </div>
 
       <div>
-        <div class="select-image">
+        <ul class="select-image">
           <li class="active">
             <img src="/recipe1.png" alt="" name="きゅうり" @click="select" />
             <p>きゅうり</p>
@@ -41,9 +41,6 @@ const select = (e) => {
             <img src="/potato.png" alt="" />
             <p>じゃがいも</p>
           </li>
-        </div>
-
-        <div class="select-image">
           <li>
             <img src="/milk.png" alt="" />
             <p>牛乳</p>
@@ -56,7 +53,7 @@ const select = (e) => {
             <img src="/400px-Table_salt_with_salt_shaker_V1.png" alt="" />
             <p>チーズ</p>
           </li>
-        </div>
+        </ul>
       </div>
     </div>
 
@@ -140,7 +137,8 @@ h1 {
 
 .select-image {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .select-image {

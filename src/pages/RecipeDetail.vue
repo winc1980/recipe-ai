@@ -1,65 +1,96 @@
 <script></script>
 <template>
   <header>
-    <div class="select-title">
-      <img src="/arrow.png" alt="">
-      <span>食材選択</span>
-    </div>
-    
-  </header>
-  <main>
-    <div class="container">
-      <p>5品の食材を取得しました。</p>
-      <div>
-        <h1>食材を選択してください</h1>
+        <div class="select-title">
+          <img src="/arrow.png" alt="">
+          <span>レシピ詳細</span>
+          <!-- ここのcss要修正 -->
+        </div>
+        
+    </header>
+        <figure>
+          <!-- ここにレシピの画像入れてください -->
+          <div class="recipe-photo">
+            <img src="/Rectangle 8.jpg" alt="">
+          </div>
+        </figure>
+    <main>
+
+      <div class="container">
+        <!-- ここにコーディングしてください -->
+        <div class ="recipe-info">
+          <h1 class="recipe-name">
+            卵とトマトの中華風炒め
+          </h1>
+          <p class="recipe-copy">
+            レンジで簡単！栄養満点うどん。
+          </p>
+        </div>
+
+        <ul class="recipe-ave">
+          <li>
+            <img src="/time-icon.jpg" alt="">調理時間：15分以下
+          </li>
+          <li>
+            <img src="/cutlery-icon.jpg" alt="">カロリー：660kcal
+          </li>
+          <li>
+            <img src="/star-icon.jpg" alt="">難易度　：難しい
+          </li>
+        </ul>
+
+        <div class="material">
+          <h2>
+            材料
+          </h2>
+          <div class="ingredient">
+            <p>
+              とり手羽先
+            </p>
+            <p>
+              2~3個
+            </p>
+          </div>
+          <div class="ingredient">
+            <p>
+              しょうゆ
+            </p>
+            <p>
+              小さじ 3/4
+            </p>
+          </div>
+          <div class="ingredient">
+            <p>
+              ピーマン
+            </p>
+            <p>
+              2~3本
+            </p>
+          </div>
+        </div>
+
+        <div class="recipe-guide">
+          <h2>
+            作り方
+          </h2>
+          <ol>
+            <li>
+              手羽先は軟骨のところから切り落とします （先の部分はスープに使うとよい）。
+            </li>
+            <li>
+              （1）をさっと洗い、水気をふいて塩、こしょうを多めにふります。グリル（または焼き網）で10～15分焼きます。途中、裏返すときにしょうゆをからめます。
+            </li>
+            <li>
+              ししとうはグリルのあいているところで約3分焼きます。
+            </li>
+          </ol>
+        </div>
+
       </div>
-
-      <div>
-        <div class="select-image">
-            <li class="active"><img  src="/recipe1.png" alt=""><p>きゅうり</p></li>
-            <li><img src="/Milk_glass.png" alt=""><p>納豆</p></li>
-            <li><img src="/potato.png" alt=""><p>じゃがいも</p></li>
-        </div>
-        
-        <div class="select-image">
-            <li><img src="/milk.png" alt=""><p>牛乳</p></li>
-            <li><img src="/salt.png" alt=""><p>塩</p></li>
-            <li><img src="/400px-Table_salt_with_salt_shaker_V1.png" alt=""><p>チーズ</p></li>
-        </div>
-        
-      </div>  
-    </div>
-
-    <div class="list">
-        <div class="list-text">
-            <h2>追加で食材を入力</h2> 
-            <ul>
-                <li><p>豚のひき肉</p></li>
-                <li><p>しょうゆ</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><input type="text" placeholder="ここに食材を入力してください"></li>
-            </ul>
-        </div>
-        
-    </div>
-
-       
-
-  </main> 
-  <footer>
-    <div class="jump-button">
-        <button class="word-jump-button">
-          <span>決定する</span>
-        </button>
-      </div>
-  </footer>   
+    </main>
 </template>
 <style scoped>
-    header{
+ header{
     position: fixed;
     top: 0;
     left: 0;
@@ -70,8 +101,6 @@
     height: 65px;     
     margin: auto;
     padding-bottom: 7rem;
-    z-index: 3;
-
 }
 
 
@@ -92,141 +121,131 @@ header span{
     margin: 0 auto;
 }
 
+
 .container{
     max-width: 353px;
-    margin-top: 102px;
-    margin: 102px auto 0;
-
+    margin-top: 0px;
+    margin: 0px auto 0;
 }
 
-.container p{
-    margin-top: 26px;
-    color: #442A00;
-    font-weight: 500;
-    font-size: 15px;
-    margin-bottom: 23px;
+
+/* こっから下にコーディングしてください */
+/* 上も修正必要であればいじってもらって大丈夫 */
+
+.recipe-photo img{   
+   display: block;
+   width: 100vw;
+    margin-top: 65px; 
+    margin-bottom: 0px;    
 }
 
-h1{
+.recipe-name{
+    font-size: 20px;
     color: #EF797B;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 29px;
-}
-
-
-
-.select-image{
-    display: flex;
-    justify-content: space-around;
-}
-
-.select-image{
-    margin-bottom: 13px;
-}
-
-.select-image p{
-    color: #000000;
-    font-size: 15px;
     font-weight: 700;
-    margin-bottom: 21px;
-    display: flex;
-    justify-content: space-around;
+    margin-bottom: 12px;
 }
 
-.select-image li{
-    list-style: none;
-}
-
-.select-image li img{
-    border-radius: 50%;
-    width: 106px;
-    height: 106px;
-    object-fit: cover;
-    border: 6px solid #9E9E9E;
-    padding: 3px;
-    opacity: 50%;
-}
-
-.select-image li.active img{
-    border-radius: 50%;
-    width: 106px;
-    height: 106px;
-    object-fit: cover;
-    border: 6px solid #EF797B;
-    padding: 3px;
-    opacity: 100%;
-}
-
-
-.list{
-    background-color: #FFF4F5;
-    width: 100vw;
-    padding-bottom: 32px;
-}
-
-.list-text{
-    max-width: 353px;
-    margin: 0 auto;
-    margin-bottom: 110px;
-
-
-}
-.list ul li{
-    list-style: none;
-    border-bottom: 1px solid #DED6CA;
-}
-
-.list p,.list input{
-    font-weight: 500;
-    padding-top: 17px;
-    padding-bottom: 15px;
-    margin-left: 12px;
-}
-
-.list input{
-    color: #DED6CA;
-
-
-}
-
-h2{
-    text-align: center;
+.recipe-copy{
+    font-size: 14px;
     color: #442A00;
-    font-size: 18px;
-    padding-top: 34px;
-    padding-bottom: 26px;
-    border-bottom: 1px solid #DED6CA;
-
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
-.jump-button{
+.recipe-info{
+    margin-top: 28px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.recipe-ave{
+    margin-top: 22px;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 24px;
+    list-style: none;
+}
+
+.recipe-ave li{
+    font-size: 14px;
+    color: #442A00;
+    font-weight: 400;
+    margin-bottom: 8px;
     display: flex;
-    justify-content: center;
-    height: 110px;
-    
-
 }
 
-.word-jump-button{
+.recipe-ave img{
+    margin-right: 11px;
+}
+
+.material h2{
+    font-size: 16px;
+    color: #EF797B;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.ingredient{
+    margin-top: 12px;
+    font-size: 14px;
+    color: #442A00;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.material{
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 24px;
+}
+
+.recipe-guide h2{
+    font-size: 16px;
+    color: #EF797B;
+    font-weight: 700;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.recipe-guide ol {
+    counter-reset: my-counter;
+    list-style: none;
+    padding: 0;
+  }
+   
+.recipe-guide li {
+    margin-bottom: 18px;
+    padding-left: 27px;
+    position: relative;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
+    font-size: 14px;
+    font-weight: 400;
+    color: #442A00;
+  }
+
+.recipe-guide li:last-child{
+    border-style: none;
+  }
+
+.recipe-guide li:before {
+    content: counter(my-counter);
+    counter-increment: my-counter;
     background-color: #EF797B;
     color: #FFFFFF;
-    width: 302px;
-    height: 45px;
-    border-radius: 23rem;
-    border: none;
-    font-size: 14px;
-    margin: 32px auto;
-    
-}
+    display: block;
+    float: left;
+    line-height: 26px;
+    margin-left: -30px;
+    text-align: center;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
 
-footer{
-    border-top: 1px solid #ECECEC;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background-color: #FFFFFF;
-}
+.recipe-guide{
+    margin-bottom: 100px;
+  }
 </style>

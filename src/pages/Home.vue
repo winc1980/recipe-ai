@@ -111,12 +111,6 @@ const imageUpload = (e) => {
         画像で食材を入力
       </label>
     </div>
-    <div class="jump-button">
-      <button class="word-jump-button" @click="">
-        <img src="/word-icon.png" alt="" />
-        <span>文字で食材を入力</span>
-      </button>
-    </div>
   </footer>
 </template>
 
@@ -128,7 +122,7 @@ p {
 .container {
   max-width: 390px;
   margin: 0 auto;
-  padding-bottom: 182px;
+  padding-bottom: 122px;
 }
 
 header {
