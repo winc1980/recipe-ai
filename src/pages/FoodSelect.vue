@@ -1,4 +1,17 @@
-<script setup></script>
+<script setup>
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+
+// ルーター
+const router = useRouter();
+// ストア
+const store = useStore();
+
+const select = (e) => {
+  console.log(e.target.name);
+};
+</script>
+
 <template>
   <header>
     <div class="select-title">
@@ -6,6 +19,7 @@
       <span>食材選択</span>
     </div>
   </header>
+  <p></p>
   <main>
     <div class="container">
       <p>5品の食材を取得しました。</p>
@@ -16,7 +30,7 @@
       <div>
         <div class="select-image">
           <li class="active">
-            <img src="/recipe1.png" alt="" />
+            <img src="/recipe1.png" alt="" name="きゅうり" @click="select" />
             <p>きゅうり</p>
           </li>
           <li>

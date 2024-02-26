@@ -1,7 +1,15 @@
 <script setup>
 import { useRouter } from 'vue-router';
-const router = useRouter();
+import { useStore } from 'vuex';
+import { detectFoods } from '../features/detectFoods';
+import { getImage } from '../features/getImage';
 
+// ルーター
+const router = useRouter();
+// ストア
+const store = useStore();
+
+// 冷蔵庫内の画像アップロード
 const imageUpload = (e) => {
   console.log('imageUpload...');
   const files = e.target.files || e.dataTransfer.files;
@@ -9,14 +17,24 @@ const imageUpload = (e) => {
   reader.onload = async (event) => {
     const b64Image = event.currentTarget.result;
     // 食材を検出する
-    const res = await detectFoods(b64Image);
-    console.log(res); // {foods_jp: array, foods_en: array}
+    //const foods = await detectFoods(b64Image);
+    //console.log(foods); // {foods_jp: array, foods_en: array}
+    // サムネイル画像の取得 wikimedia
+    let foodThumbnails = [];
+    for (const query of foods_en) {
+      foodThumbnails.push(await getImage(query));
+    }
+    // ストアに保存
+    store.commit('addFoods', {
+      jp: foods.foods_jp,
+      en: foods.foods_en,
+      thumbnail: foodThumbnails,
+    });
+
+    console.log('遷移中...');
+    router.push({ name: 'FoodSelect' });
   };
   reader.readAsDataURL(files[0]);
-};
-
-const dummy = () => {
-  router.push({ name: 'FoodSelect' });
 };
 </script>
 
@@ -88,13 +106,13 @@ const dummy = () => {
   <footer>
     <div class="jump-button">
       <label class="image-jump-button">
-        <input type="file" name="file" @change="dummy()" />
+        <input type="file" name="file" @change="imageUpload" />
         <img src="/image-icon.png" alt="" />
         画像で食材を入力
       </label>
     </div>
     <div class="jump-button">
-      <button class="word-jump-button" @click="generatelist">
+      <button class="word-jump-button" @click="">
         <img src="/word-icon.png" alt="" />
         <span>文字で食材を入力</span>
       </button>
