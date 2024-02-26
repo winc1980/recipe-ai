@@ -94,7 +94,7 @@ const dummy = () => {
       </label>
     </div>
     <div class="jump-button">
-      <button class="word-jump-button">
+      <button class="word-jump-button" @click="generatelist">
         <img src="/word-icon.png" alt="" />
         <span>文字で食材を入力</span>
       </button>
