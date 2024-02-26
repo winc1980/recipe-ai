@@ -1,62 +1,130 @@
 <script></script>
 <template>
   <header>
-    <div class="select-title">
-      <img src="/arrow.png" alt="">
-      <span>食材選択</span>
-    </div>
-    
-  </header>
-  <main>
-    <div class="container">
-      <p>5品の食材を取得しました。</p>
-      <div>
-        <h1>食材を選択してください</h1>
-      </div>
-
-      <div>
-        <div class="select-image">
-            <li class="active"><img  src="/recipe1.png" alt=""><p>きゅうり</p></li>
-            <li><img src="/Milk_glass.png" alt=""><p>納豆</p></li>
-            <li><img src="/potato.png" alt=""><p>じゃがいも</p></li>
+        <div class="select-title">
+          <img src="/arrow.png" alt="">
+          <span>あなたにオススメのレシピ</span>
         </div>
-        
-        <div class="select-image">
-            <li><img src="/milk.png" alt=""><p>牛乳</p></li>
-            <li><img src="/salt.png" alt=""><p>塩</p></li>
-            <li><img src="/400px-Table_salt_with_salt_shaker_V1.png" alt=""><p>チーズ</p></li>
-        </div>
-        
-      </div>  
-    </div>
-
-    <div class="list">
-        <div class="list-text">
-            <h2>追加で食材を入力</h2> 
+    </header>
+    <main>
+        <div class="result">
             <ul>
-                <li><p>豚のひき肉</p></li>
-                <li><p>しょうゆ</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><p>a</p></li>
-                <li><input type="text" placeholder="ここに食材を入力してください"></li>
+                <li>きゅうり</li>
+                <li>牛乳</li>
+                <li>納豆</li>
+                <li>チーズ</li>
+                <li>トマト</li>
             </ul>
         </div>
+        <div class="list-window">
+            <img src="/Arrow_left.png" alt="">
+            <img src="/Arrow_right.png" alt="">
+
+            <a href="#modal_b" class="btn">おすすめ順</a>
+            <div class="remodal" data-remodal-id="modal_b">
+                <ul>
+                    <li>おすすめ順</li>
+                    <li>時間順</li>
+                    <li>カロリー順</li>
+                    <li>難易度順</li>
+                    
+                </ul>
+            </div>
+
+        </div>
+
         
-    </div>
 
-       
+        <div class="recipe">
+            <img src="/image1.png" alt="">
+            <div class="recipe-text">
+                <div class="recipe-title">
+                <h2>やみつきうどん</h2>
+                <p>レンジで簡単！栄養満点うどん</p>
+                </div>
+                <div class="clock">
+                    <img src="/clock.png" alt="">
+                    <span>調理時間:15分以下</span>
+                </div>
+                <div class="kcal">
+                    <img src="/kcal.png" alt="">
+                    <span>カロリー:660kcal</span>
+                </div>
+                <div class="star">
+                    <img src="/star.png" alt="">
+                    <span>難易度　：難しい</span>
+                </div>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="/image2.png" alt="">
+            <div class="recipe-text">
+                <div class="recipe-title">
+                <h2>卵とトマトの</h2>
+                <p>レンジで簡単！栄養満点うどん</p>
+                </div>
+                <div class="clock">
+                    <img src="/clock.png" alt="">
+                    <span>調理時間:15分以下</span>
+                </div>
+                <div class="kcal">
+                    <img src="/kcal.png" alt="">
+                    <span>カロリー:660kcal</span>
+                </div>
+                <div class="star">
+                    <img src="/star.png" alt="">
+                    <span>難易度　：難しい</span>
+                </div>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="/image2.png" alt="">
+            <div class="recipe-text">
+                <div class="recipe-title">
+                <h2>回鍋肉</h2>
+                <p>レンジで簡単！栄養満点うどん</p>
+                </div>
+                <div class="clock">
+                    <img src="/clock.png" alt="">
+                    <span>調理時間:15分以下</span>
+                </div>
+                <div class="kcal">
+                    <img src="/kcal.png" alt="">
+                    <span>カロリー:660kcal</span>
+                </div>
+                <div class="star">
+                    <img src="/star.png" alt="">
+                    <span>難易度　：難しい</span>
+                </div>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="/image1.png" alt="">
+            <div class="recipe-text">
+                <div class="recipe-title">
+                <h2>やみつきうどん</h2>
+                <p>レンジで簡単！栄養満点うどん</p>
+                </div>
+                <div class="clock">
+                    <img src="/clock.png" alt="">
+                    <span>調理時間:15分以下</span>
+                </div>
+                <div class="kcal">
+                    <img src="/kcal.png" alt="">
+                    <span>カロリー:660kcal</span>
+                </div>
+                <div class="star">
+                    <img src="/star.png" alt="">
+                    <span>難易度　：難しい</span>
+                </div>
+            </div>
+        </div>
+        
 
-  </main> 
-  <footer>
-    <div class="jump-button">
-        <button class="word-jump-button">
-          <span>決定する</span>
-        </button>
-      </div>
-  </footer>   
+
+
+
+    </main>
 </template>
 <style scoped>
     header{
@@ -70,7 +138,6 @@
     height: 65px;     
     margin: auto;
     padding-bottom: 7rem;
-    z-index: 3;
 
 }
 
@@ -82,151 +149,144 @@ header img{
 
 header span{
     color: #442A00;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    margin-left: 121px;
 }
+
+main{
+    max-width: 353px;
+    margin: 65px auto 0;
+}
+
+
+
 
 .select-title{
-    max-width: 353px;
+    max-width: 390px;
     margin: 0 auto;
 }
 
-.container{
-    max-width: 353px;
-    margin-top: 102px;
-    margin: 102px auto 0;
+.select-title span{
+    margin-left: 57px;
 
 }
 
-.container p{
-    margin-top: 26px;
-    color: #442A00;
-    font-weight: 500;
-    font-size: 15px;
-    margin-bottom: 23px;
-}
 
-h1{
+.result ul li{
+    margin-top: 24px;
     color: #EF797B;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 29px;
-}
-
-
-
-.select-image{
-    display: flex;
-    justify-content: space-around;
-}
-
-.select-image{
-    margin-bottom: 13px;
-}
-
-.select-image p{
-    color: #000000;
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 21px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.select-image li{
-    list-style: none;
-}
-
-.select-image li img{
-    border-radius: 50%;
-    width: 106px;
-    height: 106px;
-    object-fit: cover;
-    border: 6px solid #9E9E9E;
-    padding: 3px;
-    opacity: 50%;
-}
-
-.select-image li.active img{
-    border-radius: 50%;
-    width: 106px;
-    height: 106px;
-    object-fit: cover;
-    border: 6px solid #EF797B;
-    padding: 3px;
-    opacity: 100%;
-}
-
-
-.list{
     background-color: #FFF4F5;
-    width: 100vw;
-    padding-bottom: 32px;
-}
-
-.list-text{
-    max-width: 353px;
-    margin: 0 auto;
-    margin-bottom: 110px;
-
-
-}
-.list ul li{
+    height: 32px;
+    padding: 6px 12px;
     list-style: none;
-    border-bottom: 1px solid #DED6CA;
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 700;
 }
 
-.list p,.list input{
+.list-window{
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
     font-weight: 500;
-    padding-top: 17px;
-    padding-bottom: 15px;
+    
+}
+
+.list-window span{
     margin-left: 12px;
 }
 
-.list input{
-    color: #DED6CA;
+option{
+    color: #442A00;
+    font-size: 15px;
+}
 
+.recipe{
+    display: flex;
+    border-bottom: 1px solid #DED6CA;
+    padding-top: 32px;
 
 }
+
+.recipe img{
+    width: 127px;
+    height: 115px;
+}
+
+.clock,.kcal,.star{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 8px;
+}
+
+.clock img,.kcal img,.star img{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.star{
+    margin-bottom: 26px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
 
 h2{
-    text-align: center;
-    color: #442A00;
+    color: #EF797B;
     font-size: 18px;
-    padding-top: 34px;
-    padding-bottom: 26px;
-    border-bottom: 1px solid #DED6CA;
-
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
-.jump-button{
+.recipe-text{
+    max-width: 205px;
+    text-align: left;
+    margin: 0 auto;
+}
+.recipe-title p{
+    color: #442A00;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.clock span,.kcal span,.star span{
+    font-size: 12px;
+}
+
+
+.btn {
     display: flex;
     justify-content: center;
-    height: 110px;
-    
-
-}
-
-.word-jump-button{
-    background-color: #EF797B;
-    color: #FFFFFF;
-    width: 302px;
-    height: 45px;
-    border-radius: 23rem;
+    align-items: right;
+    background: #ffffff;
     border: none;
-    font-size: 14px;
-    margin: 32px auto;
-    
+    box-sizing: border-box;
+    text-decoration: none;
+    transition-duration: 0.3s;
+  }
+  .btn:hover {
+    background-color: #FFF4F5;
+    color: #442A00;
+  }
+
+
+  .remodal {
+    display: none;
+    border-radius: 8px;
+    width: 328px;
 }
 
-footer{
-    border-top: 1px solid #ECECEC;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background-color: #FFFFFF;
-}
+  .remodal ul li{
+    list-style: none;
+    color: #442A00;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 18px 20px;
+    border-bottom: 1px solid #DED6CA;
+    justify-content: left;
+
+  }
+  
 </style>
