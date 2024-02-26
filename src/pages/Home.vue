@@ -63,21 +63,21 @@ const imageUpload = (e) => {
           <img src="/recipe1.png" alt="" />
           <div>
             <h3>卵とトマトの中華風炒め</h3>
-            <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
+            <p>卵とトマトは意外と合います。彩りも良い一品です。。</p>
           </div>
         </div>
         <div class="recipe">
           <img src="/recipe2.png" alt="" />
           <div>
             <h3>納豆とピーマンの和えもの</h3>
-            <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
+            <p>これを作れば、ピーマン嫌いな人が減ります。</p>
           </div>
         </div>
         <div class="recipe">
           <img src="/recipe3.png" alt="" />
           <div>
             <h3>牛乳のクリームシチュー</h3>
-            <p>卵とトマトの中華風炒めはいかがでしょうか。</p>
+            <p>じっくり煮込んだかのような、深い味わいが口いっぱいに広がります。</p>
           </div>
         </div>
       </div>
