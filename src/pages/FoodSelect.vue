@@ -99,7 +99,7 @@ header {
 }
 
 header img {
-  margin-top: 20px;
+  width: 12px;
 }
 
 header span {
@@ -112,6 +112,10 @@ header span {
 .select-title {
   max-width: 353px;
   margin: 0 auto;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .container {
@@ -146,16 +150,23 @@ h1 {
 }
 
 .select-image p {
-  color: #000000;
+  color: #442A00;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 21px;
   display: flex;
   justify-content: space-around;
+  width: 106px; /* 省略せずに表示するサイズを指定 */
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .select-image li {
   list-style: none;
+  color: #442A00;
 }
 
 .select-image li img {
@@ -188,6 +199,7 @@ h1 {
   max-width: 353px;
   margin: 0 auto;
   margin-bottom: 110px;
+  
 }
 .list ul li {
   list-style: none;
@@ -196,6 +208,7 @@ h1 {
 
 .list p,
 .list input {
+  color: #442a00;
   font-weight: 500;
   padding-top: 17px;
   padding-bottom: 15px;
@@ -203,7 +216,12 @@ h1 {
 }
 
 .list input {
-  color: #ded6ca;
+  color: #442a00;
+  width: 100%;
+}
+
+.list input::placeholder {
+  color: #7a6c56;
 }
 
 h2 {
@@ -230,6 +248,7 @@ h2 {
   border: none;
   font-size: 14px;
   margin: 32px auto;
+  text-align: center;
 }
 
 footer {

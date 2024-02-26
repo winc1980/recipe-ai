@@ -48,7 +48,7 @@ const imageUpload = (e) => {
     <div class="container">
       <div class="recommend-recipe">
         <div class="recommend-recipe-title">
-          <img src="/thumbsup.png" alt="" />
+          <img class="reco-icon" src="/thumbsup.png" alt="" />
           <h2>おすすめのレシピ</h2>
         </div>
         <div class="recipe">
@@ -75,7 +75,7 @@ const imageUpload = (e) => {
       </div>
       <div class="seasonal-recipe">
         <div class="seasonal-recipe-title">
-          <img src="/flower.png" alt="" />
+          <img class="season-icon" src="/flower.png" alt="" />
           <h2>季節のレシピ</h2>
         </div>
 
@@ -179,11 +179,14 @@ h3 {
   color: #442a00;
   margin-top: 3px;
   font-weight: 700;
+  margin-bottom: 6px;
 }
 
 p {
   color: #908574;
   font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .recipe img {
@@ -192,6 +195,11 @@ p {
   margin-right: 21px;
   object-fit: cover;
   flex-shrink: 0;
+}
+.reco-icon , .season-icon{
+  display: block;
+  width: 26px;
+  height: 26px;
 }
 .seasonal-recipe-title {
   display: flex;
@@ -211,8 +219,10 @@ p {
   color: #ffffff;
   width: 302px;
   height: 45px;
+  line-height: 45px;
   border-radius: 23rem;
   border: none;
+  font-weight: 500;
   margin-top: 30px;
   margin-bottom: 17px;
   font-size: 14px;
@@ -241,7 +251,10 @@ input[type='file'] {
 
 .image-jump-button img,
 .word-jump-button img {
+  width: 18px;
+  height: 18px;
   margin-right: 18px;
+  margin-top: 2px;
 }
 
 footer {

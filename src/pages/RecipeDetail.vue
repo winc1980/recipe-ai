@@ -106,12 +106,12 @@
 
 
 header img{
-    margin-top: 20px;
+    width: 12px;
 }
 
 header span{
     color: #442A00;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     margin-left: 121px;
 }
@@ -119,6 +119,10 @@ header span{
 .select-title{
     max-width: 353px;
     margin: 0 auto;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 
@@ -163,6 +167,10 @@ header span{
     border-bottom: 1px solid #ECECEC;
     padding-bottom: 24px;
     list-style: none;
+}
+.recipe-ave img {
+    width: 18px;
+    height: 18px;
 }
 
 .recipe-ave li{
@@ -243,6 +251,7 @@ header span{
     width: 26px;
     border-radius: 50%;
     margin-right: 20px;
+    font-weight: 700;
   }
 
 .recipe-guide{
