@@ -1,0 +1,146 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+}
+
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+}
+
+
+p {
+    margin: 0;
+}
+
+.container{
+    max-width: 390px;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+}
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #FFFFFF;
+}
+
+.title{
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.container{
+    margin-top: 102px;
+}
+
+.recommend-recipe,.seasonal-recipe{
+    max-width: 353px;
+    margin: 0 auto;
+}
+
+.recommend-recipe-title{
+    display: flex;
+    justify-content: left;
+    color: #442A00;
+}
+
+.recommend-recipe-title img,.seasonal-recipe-title img{
+    margin-right: 13px;
+}
+
+h2{
+    line-height: 26px;
+}
+
+.recipe{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 20px;
+    margin-top: 21px;
+    padding-bottom: 20px;
+}
+
+h3{
+    color: #442A00;
+    margin-top: 3px;
+}
+
+p{
+    color: #908574;
+    font-size: 12px;
+}
+
+.recipe img{
+    width: 113px;
+    height: 72px;
+    margin-right: 21px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+.seasonal-recipe-title{
+    display: flex;
+    justify-content: left;
+    color: #442A00;
+    margin-top: 33px;
+    align-items: center;
+}
+
+.jump-button{
+    display: flex;
+    justify-content: center;
+}
+
+.image-jump-button{
+    background-color: #EF797B;
+    color: #FFFFFF;
+    width: 302px;
+    height: 45px;
+    border-radius: 23rem;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+.word-jump-button{
+    background-color: #FFFFFF;
+    color: #EF797B;
+    width: 302px;
+    height: 45px;
+    border-radius: 23rem;
+    border: 2px solid #EF797B;
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.image-jump-button img,.word-jump-button img{
+    margin-right: 18px;
+}
+
+footer{
+    border-top: 1px solid #ECECEC;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #FFFFFF;
+    
+}

@@ -1,0 +1,128 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+}
+
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;
+    
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+}
+
+
+p {
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #FFFFFF;  
+    border-bottom: 1px solid #ECECEC; 
+    height: 65px;     
+    margin: auto;
+    padding-bottom: 7rem;
+}
+
+
+
+header img{
+    margin-top: 20px;
+}
+
+header span{
+    color: #442A00;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 121px;
+}
+
+.select-title{
+    max-width: 353px;
+    margin: 0 auto;
+}
+
+
+.container{
+    max-width: 390px;
+    margin-top: 102px;
+    margin: 102px auto 0;
+
+}
+
+h1{
+    color: #EF797B;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+
+.list-text{
+    max-width: 353px;
+    margin: 0 auto 110px;
+
+
+}
+.list ul li{
+    list-style: none;
+    border-bottom: 1px solid #DED6CA;
+
+}
+
+.list p,.list input{
+    font-weight: 500;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    color: #442A00;
+
+}
+
+.list input{
+    color: #DED6CA;
+
+}
+
+.jump-button{
+    display: flex;
+    justify-content: center;
+    height: 110px;
+    
+
+}
+
+.word-jump-button{
+    background-color: #EF797B;
+    color: #FFFFFF;
+    width: 302px;
+    height: 45px;
+    border-radius: 23rem;
+    border: none;
+    font-size: 14px;
+    margin: 32px auto;
+    
+}
+
+
+footer{
+    border-top: 1px solid #ECECEC;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #FFFFFF;
+    margin-top: 33px;
+}
