@@ -1,8 +1,4 @@
-<script>
-const props = defineProps({
-  user: Object,
-});
-</script>
+<script></script>
 <template>
   <header>
     <div class="title">
