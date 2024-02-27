@@ -4,8 +4,8 @@
     <p align="center">HPチーム春合宿2024年 グループ3 作品</p>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/3-Vue.js-4FC08D.svg?logo=vue.js&style=plastic">
-  <img src="https://img.shields.io/badge/20-Node.js-339933.svg?logo=node.js&style=plastic">
+  <img src="https://img.shields.io/badge/Vue.js-3-4FC08D.svg?logo=vue.js&style=plastic">
+  <img src="https://img.shields.io/badge/Node.js-20-339933.svg?logo=node.js&style=plastic">
   <img src="https://github.com/winc1980/recipe-ai/actions/workflows/deploy-gh-pages.yml/badge.svg">
 </p>
 
