@@ -3,6 +3,11 @@
     <strong align="center">今晩の料理は何にしますか？ RECIPE AI ならあなたの冷蔵庫の写真から最適なレシピを提案いたします。</strong><br /><br />
     <p align="center">HPチーム春合宿2024年 グループ3 作品</p>
 </p>
+<center>
+  <img src="https://img.shields.io/badge/3-Vue.js-4FC08D.svg?logo=vue.js&style=plastic">
+  <img src="https://img.shields.io/badge/20-Node.js-339933.svg?logo=node.js&style=plastic">
+  <img src="https://github.com/winc1980/recipe-ai/actions/workflows/deploy-gh-pages.yml/badge.svg">
+</center>
 
 ## アプリの特徴
 
