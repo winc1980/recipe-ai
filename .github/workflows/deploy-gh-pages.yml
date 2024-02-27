@@ -34,6 +34,7 @@ jobs:
         run: npm ci && npm run build
         env:
           PUBLIC_URL: /recipe-ai
+          VITE_OPENAI_KEY: ${{ secrets.RECIPEAI_OPENAI_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
