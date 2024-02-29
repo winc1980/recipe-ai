@@ -9,51 +9,6 @@
   <img src="https://github.com/winc1980/recipe-ai/actions/workflows/deploy-gh-pages.yml/badge.svg">
 </p>
 
-## アプリの特徴
-
-- **冷蔵庫内の写真から食材を選ぶ**
-  - GPTの強力な推論能力を用いて冷蔵庫内の写真から食材を検出します。
-- **レシピの提案**
-  - 最適なレシピを提案します。その他にも「料理時間」や「難易度」、「カロリー」などの情報もすぐに確認できます。
-- **レシピの詳細**
-  - レシピの作り方を確認できます。
-
-## アプリを使う
-
-- [RECIPE AI](https://github.com/winc1980/recipe-ai) ここからアクセスしてください。
-
-## スクリーンショット
-
-![](./docs/images/screenshot.png)
-
-## 拡張機能
-
-- Volar
-- Prettier - Code formatter
-
-## セットアップ
-
-1. `.env.sample`をコピーして、`.env.local`として保存する。
-2. `VITE_OPENAI_KEY=`にOpenAIのキーを入力する。
-
-3. パッケージのインストール
-
-```bash
-npm install
-```
-
-## 実行
-
-```bash
-npm run dev
-```
-
-## ビルド
-
-```bash
-npm run build
-```
-
 ## Contributors✨
 
 <table>
@@ -90,3 +45,52 @@ npm run build
     </tr>
   </tbody>
 </table>
+
+## アプリの特徴
+
+- **冷蔵庫内の写真から食材を選ぶ**
+  - GPTの強力な推論能力を用いて冷蔵庫内の写真から食材を検出します。
+- **レシピの提案**
+  - 最適なレシピを提案します。その他にも「料理時間」や「難易度」、「カロリー」などの情報もすぐに確認できます。
+- **レシピの詳細**
+  - レシピの作り方を確認できます。
+
+## アプリを使う
+
+- [RECIPE AI](https://github.com/winc1980/recipe-ai) ここからアクセスしてください。
+
+## ギャラリー
+
+![](./docs/images/screenshot.png)
+
+## 発表スライド
+
+- [RECIPE AI - スプレッドシート](https://docs.google.com/presentation/d/1DjOlIZudJjSWRcH0Lxr76GAlmQN8k8mZbin61j_crFY/edit?usp=sharing)
+
+## 拡張機能
+
+- Volar
+- Prettier - Code formatter
+
+## セットアップ
+
+1. `.env.sample`をコピーして、`.env.local`として保存する。
+2. `VITE_OPENAI_KEY=`にOpenAIのキーを入力する。
+
+3. パッケージのインストール
+
+```bash
+npm install
+```
+
+## 実行
+
+```bash
+npm run dev
+```
+
+## ビルド
+
+```bash
+npm run build
+```
