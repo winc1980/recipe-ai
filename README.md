@@ -4,17 +4,23 @@
     <p align="center">HPチーム春合宿2024年 グループ3 作品</p>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/3-Vue.js-4FC08D.svg?logo=vue.js&style=plastic">
-  <img src="https://img.shields.io/badge/20-Node.js-339933.svg?logo=node.js&style=plastic">
+  <img src="https://img.shields.io/badge/Vue.js-3-4FC08D.svg?logo=vue.js&style=plastic">
+  <img src="https://img.shields.io/badge/Node.js-20-339933.svg?logo=node.js&style=plastic">
   <img src="https://github.com/winc1980/recipe-ai/actions/workflows/deploy-gh-pages.yml/badge.svg">
 </p>
 
 ## アプリの特徴
 
-- **冷蔵庫内の写真から食材を検出する**
+- **冷蔵庫内の写真から食材を選ぶ**
+  - GPTの強力な推論能力を用いて冷蔵庫内の写真から食材を検出します。
 - **レシピの提案**
   - 最適なレシピを提案します。その他にも「料理時間」や「難易度」、「カロリー」などの情報もすぐに確認できます。
 - **レシピの詳細**
+  - レシピの作り方を確認できます。
+
+## アプリを使う
+
+- [RECIPE AI](https://github.com/winc1980/recipe-ai) ここからアクセスしてください。
 
 ## スクリーンショット
 
@@ -41,3 +47,46 @@ npm install
 ```bash
 npm run dev
 ```
+
+## ビルド
+
+```bash
+npm run build
+```
+
+## Contributors✨
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/MORIMOTO520212">
+          <img src="https://avatars.githubusercontent.com/u/28892090?v=4" /><br />
+          <sub><b>Yuma Morimoto</b></sub></a><br />
+            Backend
+        </a>
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/shuma1356">
+          <img src="https://avatars.githubusercontent.com/u/118163728?v=4" /><br />
+          <sub><b>Shuma Miyazaki</b></sub></a><br />
+            Design / Frontend
+        </a>
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/momoka39">
+          <img src="https://avatars.githubusercontent.com/u/133108363?v=4" /><br />
+          <sub><b>Momoka</b></sub></a><br />
+            Frontend
+        </a>
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="">
+          <img src="https://avatars.githubusercontent.com/u/88756450?v=4" /><br />
+          <sub><b>Yuria</b></sub></a><br />
+            Prompt Engineering / Frontend
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

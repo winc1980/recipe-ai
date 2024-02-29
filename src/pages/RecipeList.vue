@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import { generateRecipe } from '../features/generateRecipe/index';
-import { getImage } from '../features/getImage';
+import { getImage } from '../features/getImage/index';
 
 // ルーター
 const router = useRouter();
@@ -11,22 +11,28 @@ const router = useRouter();
 const store = useStore();
 
 const recipeData = ref({});
-const thumbnailData = ref([]);
 
 // 進捗バー
 const progressVisible = ref(true);
 
-(async () => {
-  recipeData.value = await generateRecipe(store.state.selectedFoods);
-  console.log(recipeData.value);
+const baseUrl = import.meta.env.BASE_URL;
 
-  recipeData.value.title_en.forEach(async (title_en) => {
-    console.log('fetch image: ', title_en);
-    thumbnailData.value.push(await getImage(title_en));
-  });
+if (store.state.selectedFoods) {
+  (async () => {
+    recipeData.value = await generateRecipe(store.state.selectedFoods);
+    console.log(recipeData.value);
 
-  progressVisible.value = false;
-})();
+    recipeData.value['thumbnail'] = [];
+
+    recipeData.value.title_en.forEach(async (title_en) => {
+      console.log('fetch image: ', title_en);
+      recipeData.value['thumbnail'].push(await getImage(title_en));
+    });
+
+    store.commit('generatedRecipe', recipeData.value);
+    progressVisible.value = false;
+  })();
+}
 </script>
 
 <template>
@@ -46,10 +52,14 @@ const progressVisible = ref(true);
       </ul>
     </div>
 
-    <div v-for="(title, i) in recipeData.title_jp" class="recipe">
+    <div
+      v-for="(title, i) in recipeData.title_jp"
+      class="recipe"
+      @click="router.push({ name: 'RecipeDetail', params: { id: `${i}` } })"
+    >
       <img
         :src="
-          thumbnailData[i] ||
+          recipeData.thumbnail[i] ||
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPUvFfPPOkbPc_TFDcRBsSysBhmgZWhLGtPw&usqp=CAU'
         "
         alt=""
