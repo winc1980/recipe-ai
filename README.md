@@ -46,6 +46,8 @@
   </tbody>
 </table>
 
+https://github.com/winc1980/recipe-ai/assets/28892090/0fe57311-cb38-4745-a9c7-a4ded76f0393
+
 ## アプリの特徴
 
 - **冷蔵庫内の写真から食材を選ぶ**
