@@ -95,7 +95,9 @@ export const generateRecipe = async (foods) => {
         },
       },
     ],
-    function_call: 'auto',
+    function_call: {
+      name: 'recipe',
+    },
     max_tokens: 1000,
   });
   return JSON.parse(chatCompletion2.choices[0].message.function_call.arguments);
