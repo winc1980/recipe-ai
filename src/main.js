@@ -8,7 +8,7 @@ import App from './App.vue';
 const store = createStore({
   state() {
     return {
-      // 食材リスト（JPとEN）
+      // 食材リスト
       foods: {
         // jp: ['ex_りんご', 'ex_きゅうり'],
         // en: ['apple', 'cucumber'],
@@ -18,10 +18,23 @@ const store = createStore({
         // ],
         jp: [],
         en: [],
-        thumbnail: [],
+        thumbnail: [
+          'https://www.nikon-image.com/products/mirrorless/lineup/z_50/img/sample/pic_01_l.jpg',
+        ],
       },
       // 選択した食材（食材の名前）
       selectedFoods: [],
+      // 生成したレシピ
+      // {
+      //   title_jp: [],
+      //   title_en: [],
+      //   time: [],
+      //   kcal: [],
+      //   difficulty: [],
+      //   catchcopy: [],
+      //   thumbnail: [],
+      // }
+      generatedRecipe: {},
     };
   },
   mutations: {
@@ -38,6 +51,11 @@ const store = createStore({
     unSelectFood(state, name) {
       console.log('unSelectFood...');
       state.selectedFoods = state.selectedFoods.filter((n) => n !== name);
+    },
+    generatedRecipe(state, data) {
+      console.log('generatedRecipe...');
+      state.generatedRecipe = data;
+      console.log(state.generatedRecipe);
     },
   },
 });

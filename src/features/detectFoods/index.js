@@ -65,7 +65,9 @@ export const detectFoods = async (b64Image) => {
         },
       },
     ],
-    function_call: 'auto',
+    function_call: {
+      name: 'foods',
+    },
     max_tokens: 1000,
   });
   return JSON.parse(chatCompletion2.choices[0].message.function_call.arguments);
